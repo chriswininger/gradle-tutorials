@@ -164,3 +164,47 @@ The `by` in this line is example of a kotlin `delegate`
 `val log4j_version: String by project`
 
 ![img.png](img.png)
+
+
+### api vs implementation
+
+Specifying api means that in addition to including in this project/sub-project we'll re-expose this
+as a dependency for projects that depend on this so that they don't also have to supply the dependency
+
+![img_1.png](img_1.png)
+
+### A good way to get more info about the tasks that are running
+
+`./gradlew clean build --console plain`
+
+![img_2.png](img_2.png)
+
+### To see test logs
+
+![img_3.png](img_3.png)
+
+or for kotlin
+
+![img_4.png](img_4.png)
+
+keep in mind there's an import you need to add
+
+![img_5.png](img_5.png)
+
+there's a test-logger plugin we can add which lets us to much better
+
+![img_6.png](img_6.png)
+
+![img_7.png](img_7.png)
+
+![img_8.png](img_8.png)
+
+^ many of these values are defaults and are just shown for example purposes
+
+kotlin version:
+
+![img_9.png](img_9.png)
+
+### Running a single test
+
+`gradle test --tests *shouldCreateASession`
