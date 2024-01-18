@@ -7,8 +7,6 @@ plugins {
 }
 
 kotlin {
-  jvm("desktop")
-
   @OptIn(ExperimentalWasmDsl::class)
   wasmJs {
     moduleName = "app"
@@ -21,7 +19,7 @@ kotlin {
   }
 
   sourceSets {
-    commonMain.dependencies {
+   commonMain.dependencies {
       implementation(compose.runtime)
       implementation(compose.foundation)
       implementation(compose.material)
